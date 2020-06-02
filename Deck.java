@@ -20,7 +20,7 @@ public class Deck {
 	
 	// methods
 	public void shuffle(int n) {	// pass in number of shuffles
-		for(int i=0;i<n;i++) {		// loop 
+		for(int i=0;i<n;i++) {		// loop depending on number of shuffles
 			Collections.shuffle(deckOfCards);	// randomly reorganize ArrayList
 		}
 		this.topCardPos = 0;	// set position of top Card to 0
@@ -33,7 +33,7 @@ public class Deck {
 	public Cards getTopCard() {
 		int currentTopCard = topCardPos;	// set current top Card position to variable that is returned
 		topCardPos += 1;			// iterate top Card number
-		return deckOfCards.get(currentTopCard);
+		return deckOfCards.get(currentTopCard);	// return top Card from Deck
 	}
 	
 	public void printDeck() {
