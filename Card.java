@@ -1,26 +1,26 @@
 
 public class Card {
 	// instantiated variables
-	private Denom denom;
+	private Value value;
 	private Suit suit;
 	
 	// constructor
-	public Card(Suit suit, Denom denom) {
+	public Card(Suit suit, Value value) {
 		this.suit = suit;
-		this.denom = denom;
+		this.value = value;
 	}
 	
 	// methods
 	public void displayCard() {
-		System.out.println(this.suit + " OF " + this.denom);
+		System.out.println(this.suit + " OF " + this.value);
 	}
 	
-	public Denom getDenom() {
-		return this.denom;
+	public Value getValue() {
+		return this.value;
 	}
 	
-	public void setDenom(Denom denom) {
-		this.denom = denom;
+	public void setvalue(Value value) {
+		this.value = value;
 	}
 	
 	public Suit getSuit() {

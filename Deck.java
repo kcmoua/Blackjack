@@ -11,8 +11,8 @@ public class Deck {
 		this.deckOfCards = new ArrayList<Card>();	// create ArrayList of Card objects
 		
 		for(Suit suitValue:Suit.values()) {			// iterate through Suit enum
-			for(Denom denomValue:Denom.values()) {	// iterate through Denom enum
-				this.deckOfCards.add(new Card(suitValue, denomValue));		// create new Card object with current suit and denom values
+			for(Value value:Value.values()) {	// iterate through Value enum
+				this.deckOfCards.add(new Card(suitValue, value));		// create new Card object with current suit and denom values
 			}
 		}
 		this.topCardPos = 0;		// set position of top Card to 0
@@ -34,6 +34,12 @@ public class Deck {
 		int currentTopCard = topCardPos;		// set current top Card position to variable that is returned
 		topCardPos += 1;			// iterate top Card number
 		return deckOfCards.get(currentTopCard);
+	}
+	
+	public void printDeck() {
+		for(Card cards:deckOfCards) {
+			cards.displayCard();
+		}
 	}
 	
 }
